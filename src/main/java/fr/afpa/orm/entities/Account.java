@@ -21,6 +21,7 @@ import jakarta.persistence.Table;
 
 /**
  * Classe représentant le compte bancaire d'un utilisateur
+ * 
  * TODO faire de cette classe une entité
  * Plus d'informations sur les entité JPA -> https://www.baeldung.com/jpa-entities
  * Attention de bien choisir les types en fonction de ceux du script SQL.
@@ -55,9 +56,16 @@ public class Account {
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User owner;
 
+    /*
+     * TODO implémenter un constructeur vide --> obligatoire pour l'utilisation d'un ORM
+     */
     public Account() {
         // Constructeur vide pour permettre à Spring d'instancier les objets.
     }
+
+    /*
+     * TODO implémenter les getters et les setters
+     */
 
     public Long getId() {
         return this.id;

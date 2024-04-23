@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>280</y>
+      <w>210</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>User
+--
+- id: UUID
+- firstName: String
+- lastName: String
+- email: String
+- birthDate: LocalDate
+--
++ ctor
++ getters/setters
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>280</y>
+      <w>210</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Account
+--
+- id: Long
+- creationTime: LocalDateTime
+- balance: BigDecimal
+--
++ ctor
++ getters/setters
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>350</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+owns &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>560</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>BankAdvisor
+--
+- id: UUID
+- firstName: String
+- lastName : String
+- hiringDate : LocalDate
+- specialty: Specialty
+--
++ ctor
++ getters/setters
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>830</x>
+      <y>580</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Specialty
+--
+Assurance
+Placement
+Prêt immobilier
+Crédit consommation
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>440</y>
+      <w>90</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..*
+follows ^</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

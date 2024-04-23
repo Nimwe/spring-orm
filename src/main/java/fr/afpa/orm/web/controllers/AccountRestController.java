@@ -31,7 +31,6 @@ import jakarta.servlet.http.HttpServletResponse;
 @RestController
 @RequestMapping("/api/accounts")
 public class AccountRestController {
-    @Autowired
     private AccountRepository accountRepository;
 
     /** 
