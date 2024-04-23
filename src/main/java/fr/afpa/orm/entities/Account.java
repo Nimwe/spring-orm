@@ -49,53 +49,16 @@ public class Account {
     private BigDecimal balance = BigDecimal.ZERO;
 
     /**
-     * Association de type @ManyToOne : plusieurs comptes différents peuvent être associés à la même personne
+     * TODO ajouter les attributs manquants (se reporter à la structure de la base de données pour retrouver les attributs)
      */
-    @JsonIgnore
-    @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private User owner;
 
     /*
      * TODO implémenter un constructeur vide --> obligatoire pour l'utilisation d'un ORM
      */
-    public Account() {
-        // Constructeur vide pour permettre à Spring d'instancier les objets.
-    }
+
 
     /*
      * TODO implémenter les getters et les setters
      */
 
-    public Long getId() {
-        return this.id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public LocalDateTime getCreationTime() {
-        return this.creationTime;
-    }
-
-    public void setCreationTime(LocalDateTime creationTime) {
-        this.creationTime = creationTime;
-    }
-
-    public BigDecimal getBalance() {
-        return this.balance;
-    }
-
-    public void setBalance(BigDecimal balance) {
-        this.balance = balance;
-    }
-
-    public User getOwner() {
-        return owner;
-    }
-
-    public void setOwner(User owner) {
-        this.owner = owner;
-    }
 }
