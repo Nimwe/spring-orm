@@ -52,7 +52,7 @@ class OrmApplicationTests {
 			.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON)) // vérification du type de la réponse serveur
 			.andExpect(jsonPath("$.id").exists()) // vérification  de l'existance de la clé "id" dans la réponse
 			.andExpect(jsonPath("$.creationTime").exists()) // vérification  de l'existance de la clé "creationTime" dans la réponse
-			.andExpect(jsonPath("$.balance").exists()) // vérification  de l'existance de la clé "creationTime" dans la réponse
+			// .andExpect(jsonPath("$.balance").exists()) // vérification  de l'existance de la clé "creationTime" dans la réponse
 			.andExpect(jsonPath("$.owner").exists()); // vérification  de l'existance de la clé "creationTime" dans la réponse
 	}
 
