@@ -31,12 +31,13 @@ import jakarta.servlet.http.HttpServletResponse;
 @RestController
 @RequestMapping("/api/accounts")
 public class AccountRestController {
+    @Autowired
     private AccountRepository accountRepository;
 
     /** 
      * TODO implémenter un constructeur
      *  
-     * TODO injecter {@link AccountRepository} en dépendance par injection via constructeur
+     * TODO injecter {@link AccountRepository} en dépendance par injection via le constructeur
      * Plus d'informations -> https://keyboardplaying.fr/blogue/2021/01/spring-injection-constructeur/
      */
     public AccountRestController(AccountRepository accountRepository) {

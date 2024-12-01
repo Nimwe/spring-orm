@@ -5,8 +5,8 @@ import java.util.UUID;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import fr.afpa.orm.entities.User;
+import fr.afpa.orm.entities.Client;
 
-@Repository("userRepository")
-public interface UserRepository extends CrudRepository<User, UUID>  {   
+@Repository("clientRepository")
+public interface ClientRepository extends CrudRepository<Client, UUID>  {   
 }

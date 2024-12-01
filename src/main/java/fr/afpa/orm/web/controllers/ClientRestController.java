@@ -13,22 +13,22 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.afpa.orm.dto.UserDto;
-import fr.afpa.orm.entities.User;
-import fr.afpa.orm.repositories.UserRepository;
+import fr.afpa.orm.dto.ClientDto;
+import fr.afpa.orm.entities.Client;
+import fr.afpa.orm.repositories.ClientRepository;
 
 @RestController
-@RequestMapping("/api/users")
-public class UserRestController {
+@RequestMapping("/api/clients")
+public class ClientRestController {
     
-    private final UserRepository userRepository;
+    private final ClientRepository userRepository;
     
-    public UserRestController(UserRepository userRepository) {
+    public ClientRestController(ClientRepository userRepository) {
         this.userRepository = userRepository;
     }
 
-    public UserDto toUserDto(User user) {
-        return new UserDto(user.getId(),
+    public ClientDto toUserDto(Client user) {
+        return new ClientDto(user.getId(),
                             user.getFirstName(),
                             user.getLastName(),
                             user.getEmail(),
@@ -37,16 +37,16 @@ public class UserRestController {
     }
 
     @GetMapping
-    public Iterable<UserDto> getAll() {
-        Iterable<User> users = userRepository.findAll();
-        Stream<User> usersStream = StreamSupport.stream(users.spliterator(), false);
+    public Iterable<ClientDto> getAll() {
+        Iterable<Client> users = userRepository.findAll();
+        Stream<Client> usersStream = StreamSupport.stream(users.spliterator(), false);
         
         return usersStream.map(this::toUserDto).collect(Collectors.toList());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserDto> getById(@PathVariable UUID id) {
-        Optional<User> user = userRepository.findById(id);
+    public ResponseEntity<ClientDto> getById(@PathVariable UUID id) {
+        Optional<Client> user = userRepository.findById(id);
         if (user.isPresent())
             return new ResponseEntity<>(toUserDto(user.get()), HttpStatus.OK);
 

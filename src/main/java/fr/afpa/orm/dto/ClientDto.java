@@ -9,5 +9,5 @@ import fr.afpa.orm.entities.Account;
 /**
  * Plus d'informations sur la pattern DTO : https://medium.com/@zubeyrdamar/java-spring-boot-handling-infinite-recursion-a95fe5a53c92
  */
-public record UserDto(UUID id, String firstname, String lastname, String email, LocalDate birthdate, List<Account> accounts) {
+public record ClientDto(UUID id, String firstname, String lastname, String email, LocalDate birthdate, List<Account> accounts) {
 }

@@ -1,12 +1,9 @@
 package fr.afpa.orm.entities;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -14,16 +11,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 /**
  * Classe représentant le compte bancaire d'un utilisateur
  * 
- * TODO faire de cette classe une entité
- * Plus d'informations sur les entité JPA -> https://www.baeldung.com/jpa-entities
+ * Plus d'informations sur les entités -> https://gayerie.dev/epsi-b3-orm/javaee_orm/jpa_entites.html
  * Attention de bien choisir les types en fonction de ceux du script SQL.
  */
 @Entity
@@ -39,7 +33,7 @@ public class Account {
     /**
      * Date de création du compte
      */
-    @Column(name = "creationtime")
+    @Column(name = "creation_time")
     private LocalDateTime creationTime;
 
     /**
@@ -53,20 +47,16 @@ public class Account {
      */
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private User owner;
+    @JoinColumn(name = "client_id", referencedColumnName = "id")
+    private Client owner;
 
     /*
-     * TODO implémenter un constructeur vide --> obligatoire pour l'utilisation d'un ORM
+     * Constructeur vide obligatoire pour l'utilisation d'un ORM
      */
     public Account() {
         // Constructeur vide pour permettre à Spring d'instancier les objets.
     }
-
-    /*
-     * TODO implémenter les getters et les setters
-     */
-
+    
     public Long getId() {
         return this.id;
     }
@@ -91,11 +81,11 @@ public class Account {
         this.balance = balance;
     }
 
-    public User getOwner() {
+    public Client getOwner() {
         return owner;
     }
 
-    public void setOwner(User owner) {
+    public void setOwner(Client owner) {
         this.owner = owner;
     }
 }

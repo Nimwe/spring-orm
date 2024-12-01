@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
@@ -16,8 +15,8 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="user")
-public class User {
+@Table(name="client")
+public class Client {
 
     /**
      * Identifiant unique de l'utilisateur
@@ -55,7 +54,7 @@ public class User {
     @OneToMany(targetEntity = Account.class, mappedBy = "owner")
     private List<Account> accounts;
 
-    public User() {
+    public Client() {
         // Constructeur vide.
     }
 

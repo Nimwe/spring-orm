@@ -3,7 +3,7 @@ package fr.afpa.orm.dto;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import fr.afpa.orm.entities.User;
+import fr.afpa.orm.entities.Client;
 
-public record AccountDto(Long id, LocalDateTime creationTime, BigDecimal balance, User owner) {
+public record AccountDto(Long id, LocalDateTime creationTime, BigDecimal balance, Client owner) {
 }
