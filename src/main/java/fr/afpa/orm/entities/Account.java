@@ -43,7 +43,7 @@ public class Account {
     private BigDecimal balance = BigDecimal.ZERO;
 
     /**
-     * Association de type @ManyToOne : plusieurs comptes différents peuvent être associés à la même personne
+     * TODO ajouter les attributs manquants (se reporter à la structure de la base de données pour retrouver les attributs)
      */
     @JsonIgnore
     @ManyToOne
