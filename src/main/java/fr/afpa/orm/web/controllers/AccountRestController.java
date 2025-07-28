@@ -26,32 +26,43 @@ import fr.afpa.orm.repositories.AccountRepository;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * TODO ajouter la/les annotations nécessaires pour faire de "AccountRestController" un contrôleur de REST API
+ * => ajouter la/les annotations nécessaires pour faire de
+ * "AccountRestController" un contrôleur de REST API
+ * => implémenter un constructeur
+ * => injecter {@link AccountRepository} en dépendance par injection via le
+ * constructeur
+ * Plus d'informations ->
+ * https://keyboardplaying.fr/blogue/2021/01/spring-injection-constructeur/
  */
+@RestController
+@RequestMapping("/accounts") // Pour ne pas mettre le parametre Account sur tous les Get et Post
 public class AccountRestController {
-    /** 
-     * TODO implémenter un constructeur
-     *  
-     * TODO injecter {@link AccountRepository} en dépendance par injection via le constructeur
-     * Plus d'informations -> https://keyboardplaying.fr/blogue/2021/01/spring-injection-constructeur/
-     */
+    private final AccountDto accountDto;
 
-
-    /**
-     * TODO implémenter une méthode qui traite les requêtes GET et qui renvoie une liste de comptes
-     *
-     * Attention, il manque peut être une annotation :)
-     */
-    public List<Account> getAll() {
-        // TODO récupération des compte provenant d'un repository
-       
-        // TODO renvoyer les objets de la classe "Account"
-        return null;
+    public AccountRestController(AccountDto accountDao) {
+        this.accountDto = accountDao;
     }
 
     /**
-     * TODO implémenter une méthode qui traite les requêtes GET avec un identifiant "variable de chemin" et qui retourne les informations du compte associé
-     * Plus d'informations sur les variables de chemin -> https://www.baeldung.com/spring-pathvariable
+     * TODO implémenter une méthode qui traite les requêtes GET et qui renvoie une
+     * liste de comptes
+     * Attention, il manque peut être une annotation :)
+     */
+    @GetMapping
+    public List<Account> getAllAccounts() {
+        return accountDto.findAll();
+    }
+    // TODO récupération des compte provenant d'un repository
+
+    // TODO renvoyer les objets de la classe "Account"
+    // return null;
+    // }
+
+    /**
+     * TODO implémenter une méthode qui traite les requêtes GET avec un identifiant
+     * "variable de chemin" et qui retourne les informations du compte associé
+     * Plus d'informations sur les variables de chemin ->
+     * https://www.baeldung.com/spring-pathvariable
      */
     @GetMapping("/{id}")
     public ResponseEntity<????> getOne(@PathVariable long id) {
@@ -60,7 +71,9 @@ public class AccountRestController {
 
     /**
      * TODO implémenter une méthode qui traite les requêtes POST
-     * Cette méthode doit recevoir les informations d'un compte en tant que "request body", elle doit sauvegarder le compte en mémoire et retourner ses informations (en json)
+     * Cette méthode doit recevoir les informations d'un compte en tant que "request
+     * body", elle doit sauvegarder le compte en mémoire et retourner ses
+     * informations (en json)
      * Tutoriel intéressant -> https://stackabuse.com/get-http-post-body-in-spring/
      * Le serveur devrai retourner un code http de succès (201 Created)
      **/
@@ -80,11 +93,15 @@ public class AccountRestController {
     }
 
     /**
-     * TODO implémenter une méthode qui traite les requêtes  DELETE 
-     * L'identifiant du compte devra être passé en "variable de chemin" (ou "path variable")
-     * Dans le cas d'un suppression effectuée avec succès, le serveur doit retourner un status http 204 (No content)
+     * TODO implémenter une méthode qui traite les requêtes DELETE
+     * L'identifiant du compte devra être passé en "variable de chemin" (ou "path
+     * variable")
+     * Dans le cas d'un suppression effectuée avec succès, le serveur doit retourner
+     * un status http 204 (No content)
      * 
-     * Il est possible de modifier la réponse du serveur en utilisant la méthode "setStatus" de la classe HttpServletResponse pour configurer le message de réponse du serveur
+     * Il est possible de modifier la réponse du serveur en utilisant la méthode
+     * "setStatus" de la classe HttpServletResponse pour configurer le message de
+     * réponse du serveur
      */
     public void remove(@PathVariable long id, HttpServletResponse response) {
         // TODO implémentation

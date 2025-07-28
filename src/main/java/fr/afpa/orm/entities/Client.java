@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
@@ -52,7 +51,7 @@ public class Client {
      * Association de type "OneToMany" : une personne peut avoir plusieurs comptes
      */
     @JsonIgnore
-    @OneToMany(targetEntity = Account.class, mappedBy = "owner")
+    @OneToMany(mappedBy = "client") // (targetEntity = Account.class, mappedBy = "client") => Utile uniquement si on déclare la liste dans type générique, ce qui n'est pas le cas ici
     private List<Account> accounts;
 
     public Client() {
