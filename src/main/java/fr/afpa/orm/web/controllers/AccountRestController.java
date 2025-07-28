@@ -58,6 +58,12 @@ public class AccountRestController {
      * "variable de chemin" et qui retourne les informations du compte associé
      * Plus d'informations sur les variables de chemin ->
      * https://www.baeldung.com/spring-pathvariable
+     * 
+     * TODO serait-il possible de renvoyer plutôt un "AccountDTO" dans la "ResponseEntity" ?
+     * la déclaration de la fonction deviendrait : public ResponseEntity<AccountDTO> getOne(@PathVariable long id)
+     * Pour se faire il faudra instancier un nouvel objet de DTO à partir de account
+     * 
+     * Pour plus d'informations sur le concept de DTO : https://www.axopen.com/blog/2023/09/dto-definition-avantage/
      */
     @GetMapping("/{id}")
     public ResponseEntity<Account> getOne(@PathVariable long id) {
@@ -72,6 +78,8 @@ public class AccountRestController {
      * informations (en json)
      * Tutoriel intéressant -> https://stackabuse.com/get-http-post-body-in-spring/
      * Le serveur devrai retourner un code http de succès (201 Created)
+     * 
+    * TODO serait-il possible de renvoyer plutôt un "AccountDTO" dans la "ResponseEntity" ?
      **/
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -83,6 +91,8 @@ public class AccountRestController {
      * => implémenter une méthode qui traite les requêtes PUT
      * 
      * Attention de bien ajouter les annotations qui conviennent
+     * 
+     * TODO serait-il possible de renvoyer plutôt un "AccountDTO" dans la "ResponseEntity" ?
      */
     @PutMapping("/{id}")
     public ResponseEntity<Account> update(@PathVariable long id, @RequestBody Account updateAccount) {
