@@ -1,26 +1,14 @@
 package fr.afpa.orm.web.controllers;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import fr.afpa.orm.dto.AccountDto;
 import fr.afpa.orm.entities.Account;
 import fr.afpa.orm.repositories.AccountRepository;
 import jakarta.servlet.http.HttpServletResponse;
@@ -28,49 +16,57 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * => ajouter la/les annotations nécessaires pour faire de
  * "AccountRestController" un contrôleur de REST API
- * => implémenter un constructeur
- * => injecter {@link AccountRepository} en dépendance par injection via le
- * constructeur
- * Plus d'informations ->
- * https://keyboardplaying.fr/blogue/2021/01/spring-injection-constructeur/
  */
 @RestController
 @RequestMapping("/accounts") // Pour ne pas mettre le parametre Account sur tous les Get et Post
 public class AccountRestController {
-    private final AccountDto accountDto;
+    private final AccountRepository accountRepository;
 
-    public AccountRestController(AccountDto accountDao) {
-        this.accountDto = accountDao;
+    /*
+     * => implémenter un constructeur
+     * => injecter {@link AccountRepository} en dépendance par injection via le
+     * constructeur
+     * Plus d'informations ->
+     * https://keyboardplaying.fr/blogue/2021/01/spring-injection-constructeur/
+     */
+    public AccountRestController(AccountRepository accountRepository) {
+        this.accountRepository = accountRepository;
     }
 
     /**
-     * TODO implémenter une méthode qui traite les requêtes GET et qui renvoie une
+     * => implémenter une méthode qui traite les requêtes GET et qui renvoie une
      * liste de comptes
      * Attention, il manque peut être une annotation :)
+     * 
+     * => récupération des compte provenant d'un repository
+     * 
+     * => renvoyer les objets de la classe "Account"
+     * return null;
+     * }
+     * 
      */
+
     @GetMapping
     public List<Account> getAllAccounts() {
-        return accountDto.findAll();
+        return StreamSupport
+                .stream(accountRepository.findAll().spliterator(), false)
+                .collect(Collectors.toList());
     }
-    // TODO récupération des compte provenant d'un repository
-
-    // TODO renvoyer les objets de la classe "Account"
-    // return null;
-    // }
 
     /**
-     * TODO implémenter une méthode qui traite les requêtes GET avec un identifiant
+     * => implémenter une méthode qui traite les requêtes GET avec un identifiant
      * "variable de chemin" et qui retourne les informations du compte associé
      * Plus d'informations sur les variables de chemin ->
      * https://www.baeldung.com/spring-pathvariable
      */
     @GetMapping("/{id}")
-    public ResponseEntity<????> getOne(@PathVariable long id) {
-        // TODO compléter le code
+    public ResponseEntity<Account> getOne(@PathVariable long id) {
+        Optional<Account> account = accountRepository.findById(id);
+        return account.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
 
     /**
-     * TODO implémenter une méthode qui traite les requêtes POST
+     * => implémenter une méthode qui traite les requêtes POST
      * Cette méthode doit recevoir les informations d'un compte en tant que "request
      * body", elle doit sauvegarder le compte en mémoire et retourner ses
      * informations (en json)
@@ -79,21 +75,35 @@ public class AccountRestController {
      **/
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ???? create(@RequestBody Account account) {
-        // TODO compléter le code
+    public Account create(@RequestBody Account account) {
+        return accountRepository.save(account);
     }
 
     /**
-     * TODO implémenter une méthode qui traite les requêtes PUT
+     * => implémenter une méthode qui traite les requêtes PUT
      * 
      * Attention de bien ajouter les annotations qui conviennent
      */
-    public void update(@PathVariable long id, @RequestBody Account account) {
-        // TODO Compléter le code
+    @PutMapping("/{id}")
+    public ResponseEntity<Account> update(@PathVariable long id, @RequestBody Account updateAccount) {
+        Optional<Account> optionalAccount = accountRepository.findById(id);
+        if (optionalAccount.isPresent()) {
+            Account account = optionalAccount.get();
+
+            // Mise à jour des champs
+            account.setBalance(updateAccount.getBalance());
+            account.setActive(updateAccount.isActive());
+            account.setCreationTime(updateAccount.getCreationTime());
+            account.setClient(updateAccount.getClient());
+
+            return ResponseEntity.ok(accountRepository.save(account));
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     /**
-     * TODO implémenter une méthode qui traite les requêtes DELETE
+     * => implémenter une méthode qui traite les requêtes DELETE
      * L'identifiant du compte devra être passé en "variable de chemin" (ou "path
      * variable")
      * Dans le cas d'un suppression effectuée avec succès, le serveur doit retourner
@@ -103,7 +113,14 @@ public class AccountRestController {
      * "setStatus" de la classe HttpServletResponse pour configurer le message de
      * réponse du serveur
      */
+    @DeleteMapping("/{id}")
     public void remove(@PathVariable long id, HttpServletResponse response) {
-        // TODO implémentation
+        if (accountRepository.existsById(id)) {
+            accountRepository.deleteById(id);
+            response.setStatus(HttpServletResponse.SC_NO_CONTENT); // Erreur 204
+        } else {
+            response.setStatus(HttpServletResponse.SC_NOT_FOUND); // Erreur 404
+        }
     }
+
 }
