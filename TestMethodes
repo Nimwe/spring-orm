@@ -1,0 +1,321 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v11.3.0"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2025-07-28T14:17:09.912Z",
+				"time": 2596.0570000000002,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:8080/accounts/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.3.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 204,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Date",
+							"value": "Mon, 28 Jul 2025 14:16:02 GMT"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 2596.0570000000002,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Test DELETE"
+			},
+			{
+				"startedDateTime": "2025-07-28T14:17:09.912Z",
+				"time": 805.3829999999999,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/accounts",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.3.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"balance\": 5000,\n  \"active\": true,\n  \"creationTime\": \"2024-07-28T10:00:00\",\n  \"client\": {\n    \"id\": \"b15729ae-79af-4709-b2df-931991a14543\"\n  }\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 28 Jul 2025 14:07:43 GMT"
+						}
+					],
+					"content": {
+						"size": 194,
+						"mimeType": "application/json",
+						"text": "{\"id\":201,\"creationTime\":\"2024-07-28T10:00:00\",\"balance\":5000,\"active\":true,\"client\":{\"id\":\"b15729ae-79af-4709-b2df-931991a14543\",\"firstName\":null,\"lastName\":null,\"email\":null,\"birthdate\":null}}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 805.3829999999999,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Test POST"
+			},
+			{
+				"startedDateTime": "2025-07-28T14:17:09.912Z",
+				"time": 1088.634,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:8080/accounts/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.3.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"balance\": 1500,\n  \"active\": true,\n  \"creationTime\": \"2025-07-28T15:00:00\",\n  \"client\": {\n    \"id\": \"92622250-75f7-4cbe-a8e7-63a7e4a6f233\"\n  }\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 28 Jul 2025 14:04:06 GMT"
+						}
+					],
+					"content": {
+						"size": 192,
+						"mimeType": "application/json",
+						"text": "{\"id\":1,\"creationTime\":\"2025-07-28T15:00:00\",\"balance\":1500,\"active\":true,\"client\":{\"id\":\"92622250-75f7-4cbe-a8e7-63a7e4a6f233\",\"firstName\":null,\"lastName\":null,\"email\":null,\"birthdate\":null}}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 1088.634,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Test PUT"
+			},
+			{
+				"startedDateTime": "2025-07-28T14:17:09.912Z",
+				"time": 90.917,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8080/accounts/2",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.3.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 28 Jul 2025 12:53:49 GMT"
+						}
+					],
+					"content": {
+						"size": 236,
+						"mimeType": "application/json",
+						"text": "{\"id\":2,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":2000,\"active\":true,\"client\":{\"id\":\"4ceee389-1103-418f-bb90-a3fc5c88b870\",\"firstName\":\"Maria\",\"lastName\":\"Garcia\",\"email\":\"maria.garcia@example.com\",\"birthdate\":\"1995-02-28\"}}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 90.917,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Test GET ById"
+			},
+			{
+				"startedDateTime": "2025-07-28T14:17:09.912Z",
+				"time": 589.957,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8080/accounts",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.3.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 28 Jul 2025 12:51:56 GMT"
+						}
+					],
+					"content": {
+						"size": 48094,
+						"mimeType": "application/json",
+						"text": "[{\"id\":1,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":1000,\"active\":true,\"client\":{\"id\":\"82f83b57-602c-47cd-8540-4dc60fed5123\",\"firstName\":\"Amir\",\"lastName\":\"Elias\",\"email\":\"amir.elias@example.com\",\"birthdate\":\"1981-02-15\"}},{\"id\":2,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":2000,\"active\":true,\"client\":{\"id\":\"4ceee389-1103-418f-bb90-a3fc5c88b870\",\"firstName\":\"Maria\",\"lastName\":\"Garcia\",\"email\":\"maria.garcia@example.com\",\"birthdate\":\"1995-02-28\"}},{\"id\":3,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":3000,\"active\":true,\"client\":{\"id\":\"a49b34b3-440b-4e6b-b48d-98ddaf0529ae\",\"firstName\":\"Youssef\",\"lastName\":\"El Amir\",\"email\":\"youssef.elamir@example.com\",\"birthdate\":\"1982-12-24\"}},{\"id\":4,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":4000,\"active\":true,\"client\":{\"id\":\"6e67bb39-d746-4113-809d-d05c426e6f99\",\"firstName\":\"Chen\",\"lastName\":\"Wang\",\"email\":\"chen.wang@example.com\",\"birthdate\":\"1983-11-28\"}},{\"id\":5,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":5000,\"active\":true,\"client\":{\"id\":\"d9249545-b249-4018-ac6d-a6fe3a0702dd\",\"firstName\":\"Fatima\",\"lastName\":\"Khan\",\"email\":\"fatima.khan@example.com\",\"birthdate\":\"1998-08-05\"}},{\"id\":6,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":6000,\"active\":true,\"client\":{\"id\":\"a0726fce-f48d-4030-9334-f68251d978b1\",\"firstName\":\"Dong\",\"lastName\":\"Nguyen\",\"email\":\"dong.nguyen@example.com\",\"birthdate\":\"1995-10-30\"}},{\"id\":7,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":7000,\"active\":true,\"client\":{\"id\":\"fc7d5450-e57e-49a1-bafd-a1c0c5014ddd\",\"firstName\":\"Yasmin\",\"lastName\":\"Khalifa\",\"email\":\"yasmin.khalifa@example.com\",\"birthdate\":\"1980-04-19\"}},{\"id\":8,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":8000,\"active\":true,\"client\":{\"id\":\"4b27fd6b-3357-4404-a1cc-fe8f67788385\",\"firstName\":\"Amira\",\"lastName\":\"Said\",\"email\":\"amira.said@example.com\",\"birthdate\":\"1985-03-05\"}},{\"id\":9,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":9000,\"active\":true,\"client\":{\"id\":\"7226ca41-3ef9-4f48-aff1-ab2677ec6d8a\",\"firstName\":\"Santiago\",\"lastName\":\"Hernandez\",\"email\":\"santiago.hernandez@example.com\",\"birthdate\":\"1997-05-01\"}},{\"id\":10,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":10000,\"active\":true,\"client\":{\"id\":\"d9249545-b249-4018-ac6d-a6fe3a0702dd\",\"firstName\":\"Fatima\",\"lastName\":\"Khan\",\"email\":\"fatima.khan@example.com\",\"birthdate\":\"1998-08-05\"}},{\"id\":11,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":11000,\"active\":true,\"client\":{\"id\":\"54a8048e-375f-4e26-96e3-62ee92be8c64\",\"firstName\":\"Giorgos\",\"lastName\":\"Papadopoulos\",\"email\":\"giorgos.papadopoulos@example.com\",\"birthdate\":\"1983-03-25\"}},{\"id\":12,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":12000,\"active\":true,\"client\":{\"id\":\"7ca4cacf-0144-4bd8-8f6e-c421edd0303c\",\"firstName\":\"Giovanni\",\"lastName\":\"Ferrari\",\"email\":\"giovanni.ferrari@example.com\",\"birthdate\":\"1992-07-22\"}},{\"id\":13,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":13000,\"active\":true,\"client\":{\"id\":\"8ca7782c-7817-47a9-8308-07cfe7e56b68\",\"firstName\":\"Nadia\",\"lastName\":\"Omar\",\"email\":\"nadia.omar@example.com\",\"birthdate\":\"1978-08-10\"}},{\"id\":14,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":14000,\"active\":true,\"client\":{\"id\":\"f55fc259-21d3-4786-a074-fa8a92b4d015\",\"firstName\":\"Sofia\",\"lastName\":\"Kowalski\",\"email\":\"sofia.kowalski@example.com\",\"birthdate\":\"1996-10-01\"}},{\"id\":15,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":15000,\"active\":true,\"client\":{\"id\":\"7ca4cacf-0144-4bd8-8f6e-c421edd0303c\",\"firstName\":\"Giovanni\",\"lastName\":\"Ferrari\",\"email\":\"giovanni.ferrari@example.com\",\"birthdate\":\"1992-07-22\"}},{\"id\":16,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":16000,\"active\":true,\"client\":{\"id\":\"094276bd-bf5b-456e-bf70-786562675ba4\",\"firstName\":\"Santiago\",\"lastName\":\"Lopez\",\"email\":\"santiago.lopez@example.com\",\"birthdate\":\"1981-01-07\"}},{\"id\":17,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":17000,\"active\":true,\"client\":{\"id\":\"c39a285d-8a6e-4f4e-95a6-3242c97bf16d\",\"firstName\":\"Yuki\",\"lastName\":\"Tanaka\",\"email\":\"yuki.tanaka@example.com\",\"birthdate\":\"1980-03-17\"}},{\"id\":18,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":18000,\"active\":true,\"client\":{\"id\":\"b15729ae-79af-4709-b2df-931991a14543\",\"firstName\":\"Catarina\",\"lastName\":\"Santos\",\"email\":\"catarina.santos@example.com\",\"birthdate\":\"1976-10-20\"}},{\"id\":19,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":19000,\"active\":true,\"client\":{\"id\":\"8ca7782c-7817-47a9-8308-07cfe7e56b68\",\"firstName\":\"Nadia\",\"lastName\":\"Omar\",\"email\":\"nadia.omar@example.com\",\"birthdate\":\"1978-08-10\"}},{\"id\":20,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":20000,\"active\":true,\"client\":{\"id\":\"f9809031-c64e-459f-9749-2e3e4df3b9d9\",\"firstName\":\"Katarzyna\",\"lastName\":\"Kowalczyk\",\"email\":\"katarzyna.kowalczyk@example.com\",\"birthdate\":\"1993-12-27\"}},{\"id\":21,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":21000,\"active\":true,\"client\":{\"id\":\"d9249545-b249-4018-ac6d-a6fe3a0702dd\",\"firstName\":\"Fatima\",\"lastName\":\"Khan\",\"email\":\"fatima.khan@example.com\",\"birthdate\":\"1998-08-05\"}},{\"id\":22,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":22000,\"active\":true,\"client\":{\"id\":\"7e3bdca8-aef3-4845-ab37-e43da21d2131\",\"firstName\":\"Fatemeh\",\"lastName\":\"Mohammadi\",\"email\":\"fatemeh.mohammadi@example.com\",\"birthdate\":\"1986-05-18\"}},{\"id\":23,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":23000,\"active\":true,\"client\":{\"id\":\"c39a285d-8a6e-4f4e-95a6-3242c97bf16d\",\"firstName\":\"Yuki\",\"lastName\":\"Tanaka\",\"email\":\"yuki.tanaka@example.com\",\"birthdate\":\"1980-03-17\"}},{\"id\":24,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":24000,\"active\":true,\"client\":{\"id\":\"9e81fa4d-0d69-41dd-969c-9f17076191e6\",\"firstName\":\"Nadia\",\"lastName\":\"Popescu\",\"email\":\"nadia.popescu@example.com\",\"birthdate\":\"1975-08-20\"}},{\"id\":25,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":25000,\"active\":true,\"client\":{\"id\":\"c39a285d-8a6e-4f4e-95a6-3242c97bf16d\",\"firstName\":\"Yuki\",\"lastName\":\"Tanaka\",\"email\":\"yuki.tanaka@example.com\",\"birthdate\":\"1980-03-17\"}},{\"id\":26,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":26000,\"active\":true,\"client\":{\"id\":\"a7e9bd5d-8312-4aeb-8046-fe382b3e846d\",\"firstName\":\"Ravi\",\"lastName\":\"Patel\",\"email\":\"ravi.patel@example.com\",\"birthdate\":\"1988-03-12\"}},{\"id\":27,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":27000,\"active\":true,\"client\":{\"id\":\"9e81fa4d-0d69-41dd-969c-9f17076191e6\",\"firstName\":\"Nadia\",\"lastName\":\"Popescu\",\"email\":\"nadia.popescu@example.com\",\"birthdate\":\"1975-08-20\"}},{\"id\":28,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":28000,\"active\":true,\"client\":{\"id\":\"fc7d5450-e57e-49a1-bafd-a1c0c5014ddd\",\"firstName\":\"Yasmin\",\"lastName\":\"Khalifa\",\"email\":\"yasmin.khalifa@example.com\",\"birthdate\":\"1980-04-19\"}},{\"id\":29,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":29000,\"active\":true,\"client\":{\"id\":\"e2a9fe71-4adc-4516-b758-405d286aba32\",\"firstName\":\"Rajesh\",\"lastName\":\"Sharma\",\"email\":\"rajesh.sharma@example.com\",\"birthdate\":\"1994-07-20\"}},{\"id\":30,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":30000,\"active\":true,\"client\":{\"id\":\"c39a285d-8a6e-4f4e-95a6-3242c97bf16d\",\"firstName\":\"Yuki\",\"lastName\":\"Tanaka\",\"email\":\"yuki.tanaka@example.com\",\"birthdate\":\"1980-03-17\"}},{\"id\":31,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":31000,\"active\":true,\"client\":{\"id\":\"c39a285d-8a6e-4f4e-95a6-3242c97bf16d\",\"firstName\":\"Yuki\",\"lastName\":\"Tanaka\",\"email\":\"yuki.tanaka@example.com\",\"birthdate\":\"1980-03-17\"}},{\"id\":32,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":32000,\"active\":true,\"client\":{\"id\":\"b494d534-9aa7-4c7e-8f4c-6a547fba25df\",\"firstName\":\"Ali\",\"lastName\":\"Al-Farsi\",\"email\":\"ali.alfarsi@example.com\",\"birthdate\":\"1985-10-13\"}},{\"id\":33,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":33000,\"active\":true,\"client\":{\"id\":\"92622250-75f7-4cbe-a8e7-63a7e4a6f233\",\"firstName\":\"John\",\"lastName\":\"Smith\",\"email\":\"john.smith@example.com\",\"birthdate\":\"1990-05-15\"}},{\"id\":34,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":34000,\"active\":true,\"client\":{\"id\":\"a31a0344-2102-44d1-8f2e-e5eec3e32251\",\"firstName\":\"Katja\",\"lastName\":\"Laine\",\"email\":\"katja.laine@example.com\",\"birthdate\":\"1977-06-05\"}},{\"id\":35,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":35000,\"active\":true,\"client\":{\"id\":\"401165f4-7955-4a11-af7a-b2d3065bb6c1\",\"firstName\":\"Elena\",\"lastName\":\"Novak\",\"email\":\"elena.novak@example.com\",\"birthdate\":\"1989-04-02\"}},{\"id\":36,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":36000,\"active\":true,\"client\":{\"id\":\"4ceee389-1103-418f-bb90-a3fc5c88b870\",\"firstName\":\"Maria\",\"lastName\":\"Garcia\",\"email\":\"maria.garcia@example.com\",\"birthdate\":\"1995-02-28\"}},{\"id\":37,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":37000,\"active\":true,\"client\":{\"id\":\"82f83b57-602c-47cd-8540-4dc60fed5123\",\"firstName\":\"Amir\",\"lastName\":\"Elias\",\"email\":\"amir.elias@example.com\",\"birthdate\":\"1981-02-15\"}},{\"id\":38,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":38000,\"active\":true,\"client\":{\"id\":\"401165f4-7955-4a11-af7a-b2d3065bb6c1\",\"firstName\":\"Elena\",\"lastName\":\"Novak\",\"email\":\"elena.novak@example.com\",\"birthdate\":\"1989-04-02\"}},{\"id\":39,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":39000,\"active\":true,\"client\":{\"id\":\"e2a9fe71-4adc-4516-b758-405d286aba32\",\"firstName\":\"Rajesh\",\"lastName\":\"Sharma\",\"email\":\"rajesh.sharma@example.com\",\"birthdate\":\"1994-07-20\"}},{\"id\":40,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":40000,\"active\":true,\"client\":{\"id\":\"3e897b52-1e81-4442-8063-0197a4452cf8\",\"firstName\":\"Ana\",\"lastName\":\"Sousa\",\"email\":\"ana.sousa@example.com\",\"birthdate\":\"1988-09-10\"}},{\"id\":41,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":41000,\"active\":true,\"client\":{\"id\":\"79bf40be-b171-46ad-914b-413826e7df8c\",\"firstName\":\"Ling\",\"lastName\":\"Li\",\"email\":\"ling.li@example.com\",\"birthdate\":\"1976-06-25\"}},{\"id\":42,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":42000,\"active\":true,\"client\":{\"id\":\"63145702-ee6a-41cb-9f35-897b875fb093\",\"firstName\":\"Hiroko\",\"lastName\":\"Kobayashi\",\"email\":\"hiroko.kobayashi@example.com\",\"birthdate\":\"1987-02-10\"}},{\"id\":43,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":43000,\"active\":true,\"client\":{\"id\":\"d2b71ebc-ac0b-4fa9-a1bd-64fe83f30565\",\"firstName\":\"Ahmed\",\"lastName\":\"Ali\",\"email\":\"ahmed.ali@example.com\",\"birthdate\":\"1978-07-10\"}},{\"id\":44,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":44000,\"active\":true,\"client\":{\"id\":\"a0726fce-f48d-4030-9334-f68251d978b1\",\"firstName\":\"Dong\",\"lastName\":\"Nguyen\",\"email\":\"dong.nguyen@example.com\",\"birthdate\":\"1995-10-30\"}},{\"id\":45,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":45000,\"active\":true,\"client\":{\"id\":\"e2a9fe71-4adc-4516-b758-405d286aba32\",\"firstName\":\"Rajesh\",\"lastName\":\"Sharma\",\"email\":\"rajesh.sharma@example.com\",\"birthdate\":\"1994-07-20\"}},{\"id\":46,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":46000,\"active\":true,\"client\":{\"id\":\"8ca7782c-7817-47a9-8308-07cfe7e56b68\",\"firstName\":\"Nadia\",\"lastName\":\"Omar\",\"email\":\"nadia.omar@example.com\",\"birthdate\":\"1978-08-10\"}},{\"id\":47,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":47000,\"active\":true,\"client\":{\"id\":\"9e81fa4d-0d69-41dd-969c-9f17076191e6\",\"firstName\":\"Nadia\",\"lastName\":\"Popescu\",\"email\":\"nadia.popescu@example.com\",\"birthdate\":\"1975-08-20\"}},{\"id\":48,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":48000,\"active\":true,\"client\":{\"id\":\"18e19e2c-4ae1-4bb7-92c3-04df156e6260\",\"firstName\":\"José\",\"lastName\":\"Gutierrez\",\"email\":\"jose.gutierrez@example.com\",\"birthdate\":\"1979-11-15\"}},{\"id\":49,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":49000,\"active\":true,\"client\":{\"id\":\"cf202b83-31b1-44ae-b1a9-9d67c3a7abaa\",\"firstName\":\"Léa\",\"lastName\":\"Dupont\",\"email\":\"lea.dupont@example.com\",\"birthdate\":\"1987-01-03\"}},{\"id\":50,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":50000,\"active\":true,\"client\":{\"id\":\"a49b34b3-440b-4e6b-b48d-98ddaf0529ae\",\"firstName\":\"Youssef\",\"lastName\":\"El Amir\",\"email\":\"youssef.elamir@example.com\",\"birthdate\":\"1982-12-24\"}},{\"id\":51,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":51000,\"active\":true,\"client\":{\"id\":\"d2b71ebc-ac0b-4fa9-a1bd-64fe83f30565\",\"firstName\":\"Ahmed\",\"lastName\":\"Ali\",\"email\":\"ahmed.ali@example.com\",\"birthdate\":\"1978-07-10\"}},{\"id\":52,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":52000,\"active\":true,\"client\":{\"id\":\"f9809031-c64e-459f-9749-2e3e4df3b9d9\",\"firstName\":\"Katarzyna\",\"lastName\":\"Kowalczyk\",\"email\":\"katarzyna.kowalczyk@example.com\",\"birthdate\":\"1993-12-27\"}},{\"id\":53,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":53000,\"active\":true,\"client\":{\"id\":\"cd85883a-cbc7-4171-a1fa-f61464aa8563\",\"firstName\":\"Ana\",\"lastName\":\"Silva\",\"email\":\"ana.silva@example.com\",\"birthdate\":\"1987-01-22\"}},{\"id\":54,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":54000,\"active\":true,\"client\":{\"id\":\"14cdb07d-477f-4393-9327-4abc9d1e81a8\",\"firstName\":\"Abdul\",\"lastName\":\"Ahmed\",\"email\":\"abdul.ahmed@example.com\",\"birthdate\":\"1984-12-10\"}},{\"id\":55,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":55000,\"active\":true,\"client\":{\"id\":\"a0726fce-f48d-4030-9334-f68251d978b1\",\"firstName\":\"Dong\",\"lastName\":\"Nguyen\",\"email\":\"dong.nguyen@example.com\",\"birthdate\":\"1995-10-30\"}},{\"id\":56,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":56000,\"active\":true,\"client\":{\"id\":\"2aedc803-f2a7-41d6-a29a-c70f8d0e2311\",\"firstName\":\"Agnieszka\",\"lastName\":\"Nowak\",\"email\":\"agnieszka.nowak@example.com\",\"birthdate\":\"1994-06-16\"}},{\"id\":57,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":57000,\"active\":true,\"client\":{\"id\":\"a31a0344-2102-44d1-8f2e-e5eec3e32251\",\"firstName\":\"Katja\",\"lastName\":\"Laine\",\"email\":\"katja.laine@example.com\",\"birthdate\":\"1977-06-05\"}},{\"id\":58,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":58000,\"active\":true,\"client\":{\"id\":\"92622250-75f7-4cbe-a8e7-63a7e4a6f233\",\"firstName\":\"John\",\"lastName\":\"Smith\",\"email\":\"john.smith@example.com\",\"birthdate\":\"1990-05-15\"}},{\"id\":59,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":59000,\"active\":true,\"client\":{\"id\":\"63145702-ee6a-41cb-9f35-897b875fb093\",\"firstName\":\"Hiroko\",\"lastName\":\"Kobayashi\",\"email\":\"hiroko.kobayashi@example.com\",\"birthdate\":\"1987-02-10\"}},{\"id\":60,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":60000,\"active\":true,\"client\":{\"id\":\"472b8569-e5fa-45b6-8421-83ca1380b138\",\"firstName\":\"Maya\",\"lastName\":\"Patil\",\"email\":\"maya.patil@example.com\",\"birthdate\":\"1990-12-05\"}},{\"id\":61,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":61000,\"active\":true,\"client\":{\"id\":\"fc7d5450-e57e-49a1-bafd-a1c0c5014ddd\",\"firstName\":\"Yasmin\",\"lastName\":\"Khalifa\",\"email\":\"yasmin.khalifa@example.com\",\"birthdate\":\"1980-04-19\"}},{\"id\":62,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":62000,\"active\":true,\"client\":{\"id\":\"0287f32d-08b4-415a-a8ec-2cdce644e3c6\",\"firstName\":\"Andrea\",\"lastName\":\"Ricci\",\"email\":\"andrea.ricci@example.com\",\"birthdate\":\"1984-07-08\"}},{\"id\":63,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":63000,\"active\":true,\"client\":{\"id\":\"3ff574d0-d69e-4034-8011-8933616b3706\",\"firstName\":\"Jin\",\"lastName\":\"Kim\",\"email\":\"jin.kim@example.com\",\"birthdate\":\"1990-11-10\"}},{\"id\":64,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":64000,\"active\":true,\"client\":{\"id\":\"34dfc437-b012-4d8a-8be6-d26ae720153c\",\"firstName\":\"Natasha\",\"lastName\":\"Ivanova\",\"email\":\"natasha.ivanova@example.com\",\"birthdate\":\"1978-03-05\"}},{\"id\":65,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":65000,\"active\":true,\"client\":{\"id\":\"d2b71ebc-ac0b-4fa9-a1bd-64fe83f30565\",\"firstName\":\"Ahmed\",\"lastName\":\"Ali\",\"email\":\"ahmed.ali@example.com\",\"birthdate\":\"1978-07-10\"}},{\"id\":66,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":66000,\"active\":true,\"client\":{\"id\":\"c496f95b-ce23-4ad3-9065-478825ff519a\",\"firstName\":\"Igor\",\"lastName\":\"Vasiliev\",\"email\":\"igor.vasiliev@example.com\",\"birthdate\":\"1996-08-11\"}},{\"id\":67,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":67000,\"active\":true,\"client\":{\"id\":\"cd85883a-cbc7-4171-a1fa-f61464aa8563\",\"firstName\":\"Ana\",\"lastName\":\"Silva\",\"email\":\"ana.silva@example.com\",\"birthdate\":\"1987-01-22\"}},{\"id\":68,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":68000,\"active\":true,\"client\":{\"id\":\"7e3bdca8-aef3-4845-ab37-e43da21d2131\",\"firstName\":\"Fatemeh\",\"lastName\":\"Mohammadi\",\"email\":\"fatemeh.mohammadi@example.com\",\"birthdate\":\"1986-05-18\"}},{\"id\":69,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":69000,\"active\":true,\"client\":{\"id\":\"e2a9fe71-4adc-4516-b758-405d286aba32\",\"firstName\":\"Rajesh\",\"lastName\":\"Sharma\",\"email\":\"rajesh.sharma@example.com\",\"birthdate\":\"1994-07-20\"}},{\"id\":70,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":70000,\"active\":true,\"client\":{\"id\":\"7c938093-3311-49e5-95b7-2af9cc319735\",\"firstName\":\"Tariq\",\"lastName\":\"Choudhury\",\"email\":\"tariq.choudhury@example.com\",\"birthdate\":\"1994-04-01\"}},{\"id\":71,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":71000,\"active\":true,\"client\":{\"id\":\"92622250-75f7-4cbe-a8e7-63a7e4a6f233\",\"firstName\":\"John\",\"lastName\":\"Smith\",\"email\":\"john.smith@example.com\",\"birthdate\":\"1990-05-15\"}},{\"id\":72,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":72000,\"active\":true,\"client\":{\"id\":\"92622250-75f7-4cbe-a8e7-63a7e4a6f233\",\"firstName\":\"John\",\"lastName\":\"Smith\",\"email\":\"john.smith@example.com\",\"birthdate\":\"1990-05-15\"}},{\"id\":73,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":73000,\"active\":true,\"client\":{\"id\":\"cf202b83-31b1-44ae-b1a9-9d67c3a7abaa\",\"firstName\":\"Léa\",\"lastName\":\"Dupont\",\"email\":\"lea.dupont@example.com\",\"birthdate\":\"1987-01-03\"}},{\"id\":74,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":74000,\"active\":true,\"client\":{\"id\":\"c496f95b-ce23-4ad3-9065-478825ff519a\",\"firstName\":\"Igor\",\"lastName\":\"Vasiliev\",\"email\":\"igor.vasiliev@example.com\",\"birthdate\":\"1996-08-11\"}},{\"id\":75,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":75000,\"active\":true,\"client\":{\"id\":\"95cb3369-cec2-4030-9ed9-1375d705b8d3\",\"firstName\":\"Hiroshi\",\"lastName\":\"Sato\",\"email\":\"hiroshi.sato@example.com\",\"birthdate\":\"1983-09-08\"}},{\"id\":76,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":76000,\"active\":true,\"client\":{\"id\":\"d6cf42b5-30b0-49d9-be38-b5c45d369743\",\"firstName\":\"Juan\",\"lastName\":\"Martinez\",\"email\":\"juan.martinez@example.com\",\"birthdate\":\"1989-10-12\"}},{\"id\":77,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":77000,\"active\":true,\"client\":{\"id\":\"3e897b52-1e81-4442-8063-0197a4452cf8\",\"firstName\":\"Ana\",\"lastName\":\"Sousa\",\"email\":\"ana.sousa@example.com\",\"birthdate\":\"1988-09-10\"}},{\"id\":78,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":78000,\"active\":true,\"client\":{\"id\":\"c39a285d-8a6e-4f4e-95a6-3242c97bf16d\",\"firstName\":\"Yuki\",\"lastName\":\"Tanaka\",\"email\":\"yuki.tanaka@example.com\",\"birthdate\":\"1980-03-17\"}},{\"id\":79,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":79000,\"active\":true,\"client\":{\"id\":\"b83afd46-791e-4003-b97c-01f8209907d5\",\"firstName\":\"Alessandro\",\"lastName\":\"Rossi\",\"email\":\"alessandro.rossi@example.com\",\"birthdate\":\"1997-09-14\"}},{\"id\":80,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":80000,\"active\":true,\"client\":{\"id\":\"4b27fd6b-3357-4404-a1cc-fe8f67788385\",\"firstName\":\"Amira\",\"lastName\":\"Said\",\"email\":\"amira.said@example.com\",\"birthdate\":\"1985-03-05\"}},{\"id\":81,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":81000,\"active\":true,\"client\":{\"id\":\"a0726fce-f48d-4030-9334-f68251d978b1\",\"firstName\":\"Dong\",\"lastName\":\"Nguyen\",\"email\":\"dong.nguyen@example.com\",\"birthdate\":\"1995-10-30\"}},{\"id\":82,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":82000,\"active\":true,\"client\":{\"id\":\"3e897b52-1e81-4442-8063-0197a4452cf8\",\"firstName\":\"Ana\",\"lastName\":\"Sousa\",\"email\":\"ana.sousa@example.com\",\"birthdate\":\"1988-09-10\"}},{\"id\":83,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":83000,\"active\":true,\"client\":{\"id\":\"a0017af1-2695-4653-a329-acc1a718b09c\",\"firstName\":\"Javier\",\"lastName\":\"Gonzalez\",\"email\":\"javier.gonzalez@example.com\",\"birthdate\":\"1979-09-02\"}},{\"id\":84,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":84000,\"active\":true,\"client\":{\"id\":\"0287f32d-08b4-415a-a8ec-2cdce644e3c6\",\"firstName\":\"Andrea\",\"lastName\":\"Ricci\",\"email\":\"andrea.ricci@example.com\",\"birthdate\":\"1984-07-08\"}},{\"id\":85,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":85000,\"active\":true,\"client\":{\"id\":\"3ff574d0-d69e-4034-8011-8933616b3706\",\"firstName\":\"Jin\",\"lastName\":\"Kim\",\"email\":\"jin.kim@example.com\",\"birthdate\":\"1990-11-10\"}},{\"id\":86,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":86000,\"active\":true,\"client\":{\"id\":\"82f83b57-602c-47cd-8540-4dc60fed5123\",\"firstName\":\"Amir\",\"lastName\":\"Elias\",\"email\":\"amir.elias@example.com\",\"birthdate\":\"1981-02-15\"}},{\"id\":87,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":87000,\"active\":true,\"client\":{\"id\":\"3ff574d0-d69e-4034-8011-8933616b3706\",\"firstName\":\"Jin\",\"lastName\":\"Kim\",\"email\":\"jin.kim@example.com\",\"birthdate\":\"1990-11-10\"}},{\"id\":88,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":88000,\"active\":true,\"client\":{\"id\":\"7e3bdca8-aef3-4845-ab37-e43da21d2131\",\"firstName\":\"Fatemeh\",\"lastName\":\"Mohammadi\",\"email\":\"fatemeh.mohammadi@example.com\",\"birthdate\":\"1986-05-18\"}},{\"id\":89,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":89000,\"active\":true,\"client\":{\"id\":\"3ff574d0-d69e-4034-8011-8933616b3706\",\"firstName\":\"Jin\",\"lastName\":\"Kim\",\"email\":\"jin.kim@example.com\",\"birthdate\":\"1990-11-10\"}},{\"id\":90,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":90000,\"active\":true,\"client\":{\"id\":\"95cb3369-cec2-4030-9ed9-1375d705b8d3\",\"firstName\":\"Hiroshi\",\"lastName\":\"Sato\",\"email\":\"hiroshi.sato@example.com\",\"birthdate\":\"1983-09-08\"}},{\"id\":91,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":91000,\"active\":true,\"client\":{\"id\":\"8ca7782c-7817-47a9-8308-07cfe7e56b68\",\"firstName\":\"Nadia\",\"lastName\":\"Omar\",\"email\":\"nadia.omar@example.com\",\"birthdate\":\"1978-08-10\"}},{\"id\":92,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":92000,\"active\":true,\"client\":{\"id\":\"7e3bdca8-aef3-4845-ab37-e43da21d2131\",\"firstName\":\"Fatemeh\",\"lastName\":\"Mohammadi\",\"email\":\"fatemeh.mohammadi@example.com\",\"birthdate\":\"1986-05-18\"}},{\"id\":93,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":93000,\"active\":true,\"client\":{\"id\":\"cd85883a-cbc7-4171-a1fa-f61464aa8563\",\"firstName\":\"Ana\",\"lastName\":\"Silva\",\"email\":\"ana.silva@example.com\",\"birthdate\":\"1987-01-22\"}},{\"id\":94,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":94000,\"active\":true,\"client\":{\"id\":\"3ff574d0-d69e-4034-8011-8933616b3706\",\"firstName\":\"Jin\",\"lastName\":\"Kim\",\"email\":\"jin.kim@example.com\",\"birthdate\":\"1990-11-10\"}},{\"id\":95,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":95000,\"active\":true,\"client\":{\"id\":\"b15729ae-79af-4709-b2df-931991a14543\",\"firstName\":\"Catarina\",\"lastName\":\"Santos\",\"email\":\"catarina.santos@example.com\",\"birthdate\":\"1976-10-20\"}},{\"id\":96,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":96000,\"active\":true,\"client\":{\"id\":\"a49b34b3-440b-4e6b-b48d-98ddaf0529ae\",\"firstName\":\"Youssef\",\"lastName\":\"El Amir\",\"email\":\"youssef.elamir@example.com\",\"birthdate\":\"1982-12-24\"}},{\"id\":97,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":97000,\"active\":true,\"client\":{\"id\":\"b494d534-9aa7-4c7e-8f4c-6a547fba25df\",\"firstName\":\"Ali\",\"lastName\":\"Al-Farsi\",\"email\":\"ali.alfarsi@example.com\",\"birthdate\":\"1985-10-13\"}},{\"id\":98,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":98000,\"active\":true,\"client\":{\"id\":\"ac676927-6124-4b2d-8f2d-3ad8edc28087\",\"firstName\":\"Muhammad\",\"lastName\":\"Abdullah\",\"email\":\"muhammad.abdullah@example.com\",\"birthdate\":\"1993-04-14\"}},{\"id\":99,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":99000,\"active\":true,\"client\":{\"id\":\"2aedc803-f2a7-41d6-a29a-c70f8d0e2311\",\"firstName\":\"Agnieszka\",\"lastName\":\"Nowak\",\"email\":\"agnieszka.nowak@example.com\",\"birthdate\":\"1994-06-16\"}},{\"id\":100,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":100000,\"active\":true,\"client\":{\"id\":\"45a9cff6-36a3-4872-bafb-6e86f7b4e65a\",\"firstName\":\"Sophie\",\"lastName\":\"Dubois\",\"email\":\"sophie.dubois@example.com\",\"birthdate\":\"1992-04-03\"}},{\"id\":101,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":101000,\"active\":true,\"client\":{\"id\":\"f55fc259-21d3-4786-a074-fa8a92b4d015\",\"firstName\":\"Sofia\",\"lastName\":\"Kowalski\",\"email\":\"sofia.kowalski@example.com\",\"birthdate\":\"1996-10-01\"}},{\"id\":102,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":102000,\"active\":true,\"client\":{\"id\":\"14cdb07d-477f-4393-9327-4abc9d1e81a8\",\"firstName\":\"Abdul\",\"lastName\":\"Ahmed\",\"email\":\"abdul.ahmed@example.com\",\"birthdate\":\"1984-12-10\"}},{\"id\":103,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":103000,\"active\":true,\"client\":{\"id\":\"3e897b52-1e81-4442-8063-0197a4452cf8\",\"firstName\":\"Ana\",\"lastName\":\"Sousa\",\"email\":\"ana.sousa@example.com\",\"birthdate\":\"1988-09-10\"}},{\"id\":104,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":104000,\"active\":true,\"client\":{\"id\":\"693759c9-8e5d-414a-95b2-6581ef470b09\",\"firstName\":\"Seung\",\"lastName\":\"Park\",\"email\":\"seung.park@example.com\",\"birthdate\":\"1990-05-25\"}},{\"id\":105,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":105000,\"active\":true,\"client\":{\"id\":\"4b27fd6b-3357-4404-a1cc-fe8f67788385\",\"firstName\":\"Amira\",\"lastName\":\"Said\",\"email\":\"amira.said@example.com\",\"birthdate\":\"1985-03-05\"}},{\"id\":106,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":106000,\"active\":true,\"client\":{\"id\":\"c384daa8-609a-44ae-b8d1-8e87fdd0a2b7\",\"firstName\":\"Federico\",\"lastName\":\"Romano\",\"email\":\"federico.romano@example.com\",\"birthdate\":\"1992-06-20\"}},{\"id\":107,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":107000,\"active\":true,\"client\":{\"id\":\"92622250-75f7-4cbe-a8e7-63a7e4a6f233\",\"firstName\":\"John\",\"lastName\":\"Smith\",\"email\":\"john.smith@example.com\",\"birthdate\":\"1990-05-15\"}},{\"id\":108,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":108000,\"active\":true,\"client\":{\"id\":\"fc7d5450-e57e-49a1-bafd-a1c0c5014ddd\",\"firstName\":\"Yasmin\",\"lastName\":\"Khalifa\",\"email\":\"yasmin.khalifa@example.com\",\"birthdate\":\"1980-04-19\"}},{\"id\":109,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":109000,\"active\":true,\"client\":{\"id\":\"79bf40be-b171-46ad-914b-413826e7df8c\",\"firstName\":\"Ling\",\"lastName\":\"Li\",\"email\":\"ling.li@example.com\",\"birthdate\":\"1976-06-25\"}},{\"id\":110,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":110000,\"active\":true,\"client\":{\"id\":\"c8fc5ef1-77b4-46f0-9625-cda2147c66d4\",\"firstName\":\"Mikhail\",\"lastName\":\"Ivanov\",\"email\":\"mikhail.ivanov@example.com\",\"birthdate\":\"1991-11-30\"}},{\"id\":111,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":111000,\"active\":true,\"client\":{\"id\":\"45a9cff6-36a3-4872-bafb-6e86f7b4e65a\",\"firstName\":\"Sophie\",\"lastName\":\"Dubois\",\"email\":\"sophie.dubois@example.com\",\"birthdate\":\"1992-04-03\"}},{\"id\":112,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":112000,\"active\":true,\"client\":{\"id\":\"e2a9fe71-4adc-4516-b758-405d286aba32\",\"firstName\":\"Rajesh\",\"lastName\":\"Sharma\",\"email\":\"rajesh.sharma@example.com\",\"birthdate\":\"1994-07-20\"}},{\"id\":113,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":113000,\"active\":true,\"client\":{\"id\":\"ac676927-6124-4b2d-8f2d-3ad8edc28087\",\"firstName\":\"Muhammad\",\"lastName\":\"Abdullah\",\"email\":\"muhammad.abdullah@example.com\",\"birthdate\":\"1993-04-14\"}},{\"id\":114,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":114000,\"active\":true,\"client\":{\"id\":\"8ca7782c-7817-47a9-8308-07cfe7e56b68\",\"firstName\":\"Nadia\",\"lastName\":\"Omar\",\"email\":\"nadia.omar@example.com\",\"birthdate\":\"1978-08-10\"}},{\"id\":115,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":115000,\"active\":true,\"client\":{\"id\":\"18e19e2c-4ae1-4bb7-92c3-04df156e6260\",\"firstName\":\"José\",\"lastName\":\"Gutierrez\",\"email\":\"jose.gutierrez@example.com\",\"birthdate\":\"1979-11-15\"}},{\"id\":116,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":116000,\"active\":true,\"client\":{\"id\":\"34dfc437-b012-4d8a-8be6-d26ae720153c\",\"firstName\":\"Natasha\",\"lastName\":\"Ivanova\",\"email\":\"natasha.ivanova@example.com\",\"birthdate\":\"1978-03-05\"}},{\"id\":117,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":117000,\"active\":true,\"client\":{\"id\":\"472b8569-e5fa-45b6-8421-83ca1380b138\",\"firstName\":\"Maya\",\"lastName\":\"Patil\",\"email\":\"maya.patil@example.com\",\"birthdate\":\"1990-12-05\"}},{\"id\":118,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":118000,\"active\":true,\"client\":{\"id\":\"27369d48-6db6-4928-976f-b82140b545e8\",\"firstName\":\"André\",\"lastName\":\"Moreira\",\"email\":\"andre.moreira@example.com\",\"birthdate\":\"1991-09-30\"}},{\"id\":119,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":119000,\"active\":true,\"client\":{\"id\":\"693759c9-8e5d-414a-95b2-6581ef470b09\",\"firstName\":\"Seung\",\"lastName\":\"Park\",\"email\":\"seung.park@example.com\",\"birthdate\":\"1990-05-25\"}},{\"id\":120,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":120000,\"active\":true,\"client\":{\"id\":\"4b27fd6b-3357-4404-a1cc-fe8f67788385\",\"firstName\":\"Amira\",\"lastName\":\"Said\",\"email\":\"amira.said@example.com\",\"birthdate\":\"1985-03-05\"}},{\"id\":121,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":121000,\"active\":true,\"client\":{\"id\":\"34dfc437-b012-4d8a-8be6-d26ae720153c\",\"firstName\":\"Natasha\",\"lastName\":\"Ivanova\",\"email\":\"natasha.ivanova@example.com\",\"birthdate\":\"1978-03-05\"}},{\"id\":122,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":122000,\"active\":true,\"client\":{\"id\":\"d6cf42b5-30b0-49d9-be38-b5c45d369743\",\"firstName\":\"Juan\",\"lastName\":\"Martinez\",\"email\":\"juan.martinez@example.com\",\"birthdate\":\"1989-10-12\"}},{\"id\":123,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":123000,\"active\":true,\"client\":{\"id\":\"fc7d5450-e57e-49a1-bafd-a1c0c5014ddd\",\"firstName\":\"Yasmin\",\"lastName\":\"Khalifa\",\"email\":\"yasmin.khalifa@example.com\",\"birthdate\":\"1980-04-19\"}},{\"id\":124,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":124000,\"active\":true,\"client\":{\"id\":\"27369d48-6db6-4928-976f-b82140b545e8\",\"firstName\":\"André\",\"lastName\":\"Moreira\",\"email\":\"andre.moreira@example.com\",\"birthdate\":\"1991-09-30\"}},{\"id\":125,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":125000,\"active\":true,\"client\":{\"id\":\"a49b34b3-440b-4e6b-b48d-98ddaf0529ae\",\"firstName\":\"Youssef\",\"lastName\":\"El Amir\",\"email\":\"youssef.elamir@example.com\",\"birthdate\":\"1982-12-24\"}},{\"id\":126,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":126000,\"active\":true,\"client\":{\"id\":\"c8fc5ef1-77b4-46f0-9625-cda2147c66d4\",\"firstName\":\"Mikhail\",\"lastName\":\"Ivanov\",\"email\":\"mikhail.ivanov@example.com\",\"birthdate\":\"1991-11-30\"}},{\"id\":127,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":127000,\"active\":true,\"client\":{\"id\":\"401165f4-7955-4a11-af7a-b2d3065bb6c1\",\"firstName\":\"Elena\",\"lastName\":\"Novak\",\"email\":\"elena.novak@example.com\",\"birthdate\":\"1989-04-02\"}},{\"id\":128,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":128000,\"active\":true,\"client\":{\"id\":\"a0726fce-f48d-4030-9334-f68251d978b1\",\"firstName\":\"Dong\",\"lastName\":\"Nguyen\",\"email\":\"dong.nguyen@example.com\",\"birthdate\":\"1995-10-30\"}},{\"id\":129,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":129000,\"active\":true,\"client\":{\"id\":\"34dfc437-b012-4d8a-8be6-d26ae720153c\",\"firstName\":\"Natasha\",\"lastName\":\"Ivanova\",\"email\":\"natasha.ivanova@example.com\",\"birthdate\":\"1978-03-05\"}},{\"id\":130,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":130000,\"active\":true,\"client\":{\"id\":\"6e67bb39-d746-4113-809d-d05c426e6f99\",\"firstName\":\"Chen\",\"lastName\":\"Wang\",\"email\":\"chen.wang@example.com\",\"birthdate\":\"1983-11-28\"}},{\"id\":131,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":131000,\"active\":true,\"client\":{\"id\":\"4b27fd6b-3357-4404-a1cc-fe8f67788385\",\"firstName\":\"Amira\",\"lastName\":\"Said\",\"email\":\"amira.said@example.com\",\"birthdate\":\"1985-03-05\"}},{\"id\":132,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":132000,\"active\":true,\"client\":{\"id\":\"45a9cff6-36a3-4872-bafb-6e86f7b4e65a\",\"firstName\":\"Sophie\",\"lastName\":\"Dubois\",\"email\":\"sophie.dubois@example.com\",\"birthdate\":\"1992-04-03\"}},{\"id\":133,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":133000,\"active\":true,\"client\":{\"id\":\"2aedc803-f2a7-41d6-a29a-c70f8d0e2311\",\"firstName\":\"Agnieszka\",\"lastName\":\"Nowak\",\"email\":\"agnieszka.nowak@example.com\",\"birthdate\":\"1994-06-16\"}},{\"id\":134,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":134000,\"active\":true,\"client\":{\"id\":\"a31a0344-2102-44d1-8f2e-e5eec3e32251\",\"firstName\":\"Katja\",\"lastName\":\"Laine\",\"email\":\"katja.laine@example.com\",\"birthdate\":\"1977-06-05\"}},{\"id\":135,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":135000,\"active\":true,\"client\":{\"id\":\"d6cf42b5-30b0-49d9-be38-b5c45d369743\",\"firstName\":\"Juan\",\"lastName\":\"Martinez\",\"email\":\"juan.martinez@example.com\",\"birthdate\":\"1989-10-12\"}},{\"id\":136,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":136000,\"active\":true,\"client\":{\"id\":\"cf202b83-31b1-44ae-b1a9-9d67c3a7abaa\",\"firstName\":\"Léa\",\"lastName\":\"Dupont\",\"email\":\"lea.dupont@example.com\",\"birthdate\":\"1987-01-03\"}},{\"id\":137,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":137000,\"active\":true,\"client\":{\"id\":\"c39a285d-8a6e-4f4e-95a6-3242c97bf16d\",\"firstName\":\"Yuki\",\"lastName\":\"Tanaka\",\"email\":\"yuki.tanaka@example.com\",\"birthdate\":\"1980-03-17\"}},{\"id\":138,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":138000,\"active\":true,\"client\":{\"id\":\"2aedc803-f2a7-41d6-a29a-c70f8d0e2311\",\"firstName\":\"Agnieszka\",\"lastName\":\"Nowak\",\"email\":\"agnieszka.nowak@example.com\",\"birthdate\":\"1994-06-16\"}},{\"id\":139,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":139000,\"active\":true,\"client\":{\"id\":\"7e3bdca8-aef3-4845-ab37-e43da21d2131\",\"firstName\":\"Fatemeh\",\"lastName\":\"Mohammadi\",\"email\":\"fatemeh.mohammadi@example.com\",\"birthdate\":\"1986-05-18\"}},{\"id\":140,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":140000,\"active\":true,\"client\":{\"id\":\"cf202b83-31b1-44ae-b1a9-9d67c3a7abaa\",\"firstName\":\"Léa\",\"lastName\":\"Dupont\",\"email\":\"lea.dupont@example.com\",\"birthdate\":\"1987-01-03\"}},{\"id\":141,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":141000,\"active\":true,\"client\":{\"id\":\"b15729ae-79af-4709-b2df-931991a14543\",\"firstName\":\"Catarina\",\"lastName\":\"Santos\",\"email\":\"catarina.santos@example.com\",\"birthdate\":\"1976-10-20\"}},{\"id\":142,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":142000,\"active\":true,\"client\":{\"id\":\"4ceee389-1103-418f-bb90-a3fc5c88b870\",\"firstName\":\"Maria\",\"lastName\":\"Garcia\",\"email\":\"maria.garcia@example.com\",\"birthdate\":\"1995-02-28\"}},{\"id\":143,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":143000,\"active\":true,\"client\":{\"id\":\"2aedc803-f2a7-41d6-a29a-c70f8d0e2311\",\"firstName\":\"Agnieszka\",\"lastName\":\"Nowak\",\"email\":\"agnieszka.nowak@example.com\",\"birthdate\":\"1994-06-16\"}},{\"id\":144,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":144000,\"active\":true,\"client\":{\"id\":\"b83afd46-791e-4003-b97c-01f8209907d5\",\"firstName\":\"Alessandro\",\"lastName\":\"Rossi\",\"email\":\"alessandro.rossi@example.com\",\"birthdate\":\"1997-09-14\"}},{\"id\":145,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":145000,\"active\":true,\"client\":{\"id\":\"693759c9-8e5d-414a-95b2-6581ef470b09\",\"firstName\":\"Seung\",\"lastName\":\"Park\",\"email\":\"seung.park@example.com\",\"birthdate\":\"1990-05-25\"}},{\"id\":146,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":146000,\"active\":true,\"client\":{\"id\":\"c8fc5ef1-77b4-46f0-9625-cda2147c66d4\",\"firstName\":\"Mikhail\",\"lastName\":\"Ivanov\",\"email\":\"mikhail.ivanov@example.com\",\"birthdate\":\"1991-11-30\"}},{\"id\":147,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":147000,\"active\":true,\"client\":{\"id\":\"54a8048e-375f-4e26-96e3-62ee92be8c64\",\"firstName\":\"Giorgos\",\"lastName\":\"Papadopoulos\",\"email\":\"giorgos.papadopoulos@example.com\",\"birthdate\":\"1983-03-25\"}},{\"id\":148,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":148000,\"active\":true,\"client\":{\"id\":\"2aedc803-f2a7-41d6-a29a-c70f8d0e2311\",\"firstName\":\"Agnieszka\",\"lastName\":\"Nowak\",\"email\":\"agnieszka.nowak@example.com\",\"birthdate\":\"1994-06-16\"}},{\"id\":149,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":149000,\"active\":true,\"client\":{\"id\":\"45a9cff6-36a3-4872-bafb-6e86f7b4e65a\",\"firstName\":\"Sophie\",\"lastName\":\"Dubois\",\"email\":\"sophie.dubois@example.com\",\"birthdate\":\"1992-04-03\"}},{\"id\":150,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":150000,\"active\":true,\"client\":{\"id\":\"a7e9bd5d-8312-4aeb-8046-fe382b3e846d\",\"firstName\":\"Ravi\",\"lastName\":\"Patel\",\"email\":\"ravi.patel@example.com\",\"birthdate\":\"1988-03-12\"}},{\"id\":151,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":151000,\"active\":true,\"client\":{\"id\":\"92622250-75f7-4cbe-a8e7-63a7e4a6f233\",\"firstName\":\"John\",\"lastName\":\"Smith\",\"email\":\"john.smith@example.com\",\"birthdate\":\"1990-05-15\"}},{\"id\":152,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":152000,\"active\":true,\"client\":{\"id\":\"cd85883a-cbc7-4171-a1fa-f61464aa8563\",\"firstName\":\"Ana\",\"lastName\":\"Silva\",\"email\":\"ana.silva@example.com\",\"birthdate\":\"1987-01-22\"}},{\"id\":153,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":153000,\"active\":true,\"client\":{\"id\":\"3ff574d0-d69e-4034-8011-8933616b3706\",\"firstName\":\"Jin\",\"lastName\":\"Kim\",\"email\":\"jin.kim@example.com\",\"birthdate\":\"1990-11-10\"}},{\"id\":154,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":154000,\"active\":true,\"client\":{\"id\":\"0287f32d-08b4-415a-a8ec-2cdce644e3c6\",\"firstName\":\"Andrea\",\"lastName\":\"Ricci\",\"email\":\"andrea.ricci@example.com\",\"birthdate\":\"1984-07-08\"}},{\"id\":155,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":155000,\"active\":true,\"client\":{\"id\":\"c496f95b-ce23-4ad3-9065-478825ff519a\",\"firstName\":\"Igor\",\"lastName\":\"Vasiliev\",\"email\":\"igor.vasiliev@example.com\",\"birthdate\":\"1996-08-11\"}},{\"id\":156,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":156000,\"active\":true,\"client\":{\"id\":\"3e897b52-1e81-4442-8063-0197a4452cf8\",\"firstName\":\"Ana\",\"lastName\":\"Sousa\",\"email\":\"ana.sousa@example.com\",\"birthdate\":\"1988-09-10\"}},{\"id\":157,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":157000,\"active\":true,\"client\":{\"id\":\"a0726fce-f48d-4030-9334-f68251d978b1\",\"firstName\":\"Dong\",\"lastName\":\"Nguyen\",\"email\":\"dong.nguyen@example.com\",\"birthdate\":\"1995-10-30\"}},{\"id\":158,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":158000,\"active\":true,\"client\":{\"id\":\"d9249545-b249-4018-ac6d-a6fe3a0702dd\",\"firstName\":\"Fatima\",\"lastName\":\"Khan\",\"email\":\"fatima.khan@example.com\",\"birthdate\":\"1998-08-05\"}},{\"id\":159,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":159000,\"active\":true,\"client\":{\"id\":\"a31a0344-2102-44d1-8f2e-e5eec3e32251\",\"firstName\":\"Katja\",\"lastName\":\"Laine\",\"email\":\"katja.laine@example.com\",\"birthdate\":\"1977-06-05\"}},{\"id\":160,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":160000,\"active\":true,\"client\":{\"id\":\"27369d48-6db6-4928-976f-b82140b545e8\",\"firstName\":\"André\",\"lastName\":\"Moreira\",\"email\":\"andre.moreira@example.com\",\"birthdate\":\"1991-09-30\"}},{\"id\":161,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":161000,\"active\":true,\"client\":{\"id\":\"a49b34b3-440b-4e6b-b48d-98ddaf0529ae\",\"firstName\":\"Youssef\",\"lastName\":\"El Amir\",\"email\":\"youssef.elamir@example.com\",\"birthdate\":\"1982-12-24\"}},{\"id\":162,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":162000,\"active\":true,\"client\":{\"id\":\"c384daa8-609a-44ae-b8d1-8e87fdd0a2b7\",\"firstName\":\"Federico\",\"lastName\":\"Romano\",\"email\":\"federico.romano@example.com\",\"birthdate\":\"1992-06-20\"}},{\"id\":163,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":163000,\"active\":true,\"client\":{\"id\":\"76a26a7f-5f3c-4845-807b-9aa6c222bfb5\",\"firstName\":\"Hans\",\"lastName\":\"Schmidt\",\"email\":\"hans.schmidt@example.com\",\"birthdate\":\"1990-02-10\"}},{\"id\":164,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":164000,\"active\":true,\"client\":{\"id\":\"094276bd-bf5b-456e-bf70-786562675ba4\",\"firstName\":\"Santiago\",\"lastName\":\"Lopez\",\"email\":\"santiago.lopez@example.com\",\"birthdate\":\"1981-01-07\"}},{\"id\":165,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":165000,\"active\":true,\"client\":{\"id\":\"76a26a7f-5f3c-4845-807b-9aa6c222bfb5\",\"firstName\":\"Hans\",\"lastName\":\"Schmidt\",\"email\":\"hans.schmidt@example.com\",\"birthdate\":\"1990-02-10\"}},{\"id\":166,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":166000,\"active\":true,\"client\":{\"id\":\"2aedc803-f2a7-41d6-a29a-c70f8d0e2311\",\"firstName\":\"Agnieszka\",\"lastName\":\"Nowak\",\"email\":\"agnieszka.nowak@example.com\",\"birthdate\":\"1994-06-16\"}},{\"id\":167,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":167000,\"active\":true,\"client\":{\"id\":\"a7e9bd5d-8312-4aeb-8046-fe382b3e846d\",\"firstName\":\"Ravi\",\"lastName\":\"Patel\",\"email\":\"ravi.patel@example.com\",\"birthdate\":\"1988-03-12\"}},{\"id\":168,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":168000,\"active\":true,\"client\":{\"id\":\"9bd3b0f1-8a0d-44d9-9886-3664b8f01601\",\"firstName\":\"Emma\",\"lastName\":\"Johnson\",\"email\":\"emma.johnson@example.com\",\"birthdate\":\"1985-12-20\"}},{\"id\":169,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":169000,\"active\":true,\"client\":{\"id\":\"7e3bdca8-aef3-4845-ab37-e43da21d2131\",\"firstName\":\"Fatemeh\",\"lastName\":\"Mohammadi\",\"email\":\"fatemeh.mohammadi@example.com\",\"birthdate\":\"1986-05-18\"}},{\"id\":170,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":170000,\"active\":true,\"client\":{\"id\":\"54a8048e-375f-4e26-96e3-62ee92be8c64\",\"firstName\":\"Giorgos\",\"lastName\":\"Papadopoulos\",\"email\":\"giorgos.papadopoulos@example.com\",\"birthdate\":\"1983-03-25\"}},{\"id\":171,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":171000,\"active\":true,\"client\":{\"id\":\"b83afd46-791e-4003-b97c-01f8209907d5\",\"firstName\":\"Alessandro\",\"lastName\":\"Rossi\",\"email\":\"alessandro.rossi@example.com\",\"birthdate\":\"1997-09-14\"}},{\"id\":172,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":172000,\"active\":true,\"client\":{\"id\":\"8ca7782c-7817-47a9-8308-07cfe7e56b68\",\"firstName\":\"Nadia\",\"lastName\":\"Omar\",\"email\":\"nadia.omar@example.com\",\"birthdate\":\"1978-08-10\"}},{\"id\":173,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":173000,\"active\":true,\"client\":{\"id\":\"693759c9-8e5d-414a-95b2-6581ef470b09\",\"firstName\":\"Seung\",\"lastName\":\"Park\",\"email\":\"seung.park@example.com\",\"birthdate\":\"1990-05-25\"}},{\"id\":174,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":174000,\"active\":true,\"client\":{\"id\":\"3ff574d0-d69e-4034-8011-8933616b3706\",\"firstName\":\"Jin\",\"lastName\":\"Kim\",\"email\":\"jin.kim@example.com\",\"birthdate\":\"1990-11-10\"}},{\"id\":175,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":175000,\"active\":true,\"client\":{\"id\":\"472b8569-e5fa-45b6-8421-83ca1380b138\",\"firstName\":\"Maya\",\"lastName\":\"Patil\",\"email\":\"maya.patil@example.com\",\"birthdate\":\"1990-12-05\"}},{\"id\":176,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":176000,\"active\":true,\"client\":{\"id\":\"d6cf42b5-30b0-49d9-be38-b5c45d369743\",\"firstName\":\"Juan\",\"lastName\":\"Martinez\",\"email\":\"juan.martinez@example.com\",\"birthdate\":\"1989-10-12\"}},{\"id\":177,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":177000,\"active\":true,\"client\":{\"id\":\"693759c9-8e5d-414a-95b2-6581ef470b09\",\"firstName\":\"Seung\",\"lastName\":\"Park\",\"email\":\"seung.park@example.com\",\"birthdate\":\"1990-05-25\"}},{\"id\":178,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":178000,\"active\":true,\"client\":{\"id\":\"63145702-ee6a-41cb-9f35-897b875fb093\",\"firstName\":\"Hiroko\",\"lastName\":\"Kobayashi\",\"email\":\"hiroko.kobayashi@example.com\",\"birthdate\":\"1987-02-10\"}},{\"id\":179,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":179000,\"active\":true,\"client\":{\"id\":\"f55fc259-21d3-4786-a074-fa8a92b4d015\",\"firstName\":\"Sofia\",\"lastName\":\"Kowalski\",\"email\":\"sofia.kowalski@example.com\",\"birthdate\":\"1996-10-01\"}},{\"id\":180,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":180000,\"active\":true,\"client\":{\"id\":\"f55fc259-21d3-4786-a074-fa8a92b4d015\",\"firstName\":\"Sofia\",\"lastName\":\"Kowalski\",\"email\":\"sofia.kowalski@example.com\",\"birthdate\":\"1996-10-01\"}},{\"id\":181,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":181000,\"active\":true,\"client\":{\"id\":\"7e3bdca8-aef3-4845-ab37-e43da21d2131\",\"firstName\":\"Fatemeh\",\"lastName\":\"Mohammadi\",\"email\":\"fatemeh.mohammadi@example.com\",\"birthdate\":\"1986-05-18\"}},{\"id\":182,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":182000,\"active\":true,\"client\":{\"id\":\"0287f32d-08b4-415a-a8ec-2cdce644e3c6\",\"firstName\":\"Andrea\",\"lastName\":\"Ricci\",\"email\":\"andrea.ricci@example.com\",\"birthdate\":\"1984-07-08\"}},{\"id\":183,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":183000,\"active\":true,\"client\":{\"id\":\"ac676927-6124-4b2d-8f2d-3ad8edc28087\",\"firstName\":\"Muhammad\",\"lastName\":\"Abdullah\",\"email\":\"muhammad.abdullah@example.com\",\"birthdate\":\"1993-04-14\"}},{\"id\":184,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":184000,\"active\":true,\"client\":{\"id\":\"d9249545-b249-4018-ac6d-a6fe3a0702dd\",\"firstName\":\"Fatima\",\"lastName\":\"Khan\",\"email\":\"fatima.khan@example.com\",\"birthdate\":\"1998-08-05\"}},{\"id\":185,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":185000,\"active\":true,\"client\":{\"id\":\"cd85883a-cbc7-4171-a1fa-f61464aa8563\",\"firstName\":\"Ana\",\"lastName\":\"Silva\",\"email\":\"ana.silva@example.com\",\"birthdate\":\"1987-01-22\"}},{\"id\":186,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":186000,\"active\":true,\"client\":{\"id\":\"472b8569-e5fa-45b6-8421-83ca1380b138\",\"firstName\":\"Maya\",\"lastName\":\"Patil\",\"email\":\"maya.patil@example.com\",\"birthdate\":\"1990-12-05\"}},{\"id\":187,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":187000,\"active\":true,\"client\":{\"id\":\"cf202b83-31b1-44ae-b1a9-9d67c3a7abaa\",\"firstName\":\"Léa\",\"lastName\":\"Dupont\",\"email\":\"lea.dupont@example.com\",\"birthdate\":\"1987-01-03\"}},{\"id\":188,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":188000,\"active\":true,\"client\":{\"id\":\"92622250-75f7-4cbe-a8e7-63a7e4a6f233\",\"firstName\":\"John\",\"lastName\":\"Smith\",\"email\":\"john.smith@example.com\",\"birthdate\":\"1990-05-15\"}},{\"id\":189,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":189000,\"active\":true,\"client\":{\"id\":\"3e897b52-1e81-4442-8063-0197a4452cf8\",\"firstName\":\"Ana\",\"lastName\":\"Sousa\",\"email\":\"ana.sousa@example.com\",\"birthdate\":\"1988-09-10\"}},{\"id\":190,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":190000,\"active\":true,\"client\":{\"id\":\"14cdb07d-477f-4393-9327-4abc9d1e81a8\",\"firstName\":\"Abdul\",\"lastName\":\"Ahmed\",\"email\":\"abdul.ahmed@example.com\",\"birthdate\":\"1984-12-10\"}},{\"id\":191,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":191000,\"active\":true,\"client\":{\"id\":\"094276bd-bf5b-456e-bf70-786562675ba4\",\"firstName\":\"Santiago\",\"lastName\":\"Lopez\",\"email\":\"santiago.lopez@example.com\",\"birthdate\":\"1981-01-07\"}},{\"id\":192,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":192000,\"active\":true,\"client\":{\"id\":\"7226ca41-3ef9-4f48-aff1-ab2677ec6d8a\",\"firstName\":\"Santiago\",\"lastName\":\"Hernandez\",\"email\":\"santiago.hernandez@example.com\",\"birthdate\":\"1997-05-01\"}},{\"id\":193,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":193000,\"active\":true,\"client\":{\"id\":\"c39a285d-8a6e-4f4e-95a6-3242c97bf16d\",\"firstName\":\"Yuki\",\"lastName\":\"Tanaka\",\"email\":\"yuki.tanaka@example.com\",\"birthdate\":\"1980-03-17\"}},{\"id\":194,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":194000,\"active\":true,\"client\":{\"id\":\"a31a0344-2102-44d1-8f2e-e5eec3e32251\",\"firstName\":\"Katja\",\"lastName\":\"Laine\",\"email\":\"katja.laine@example.com\",\"birthdate\":\"1977-06-05\"}},{\"id\":195,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":195000,\"active\":true,\"client\":{\"id\":\"c8fc5ef1-77b4-46f0-9625-cda2147c66d4\",\"firstName\":\"Mikhail\",\"lastName\":\"Ivanov\",\"email\":\"mikhail.ivanov@example.com\",\"birthdate\":\"1991-11-30\"}},{\"id\":196,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":196000,\"active\":true,\"client\":{\"id\":\"a7e9bd5d-8312-4aeb-8046-fe382b3e846d\",\"firstName\":\"Ravi\",\"lastName\":\"Patel\",\"email\":\"ravi.patel@example.com\",\"birthdate\":\"1988-03-12\"}},{\"id\":197,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":197000,\"active\":true,\"client\":{\"id\":\"472b8569-e5fa-45b6-8421-83ca1380b138\",\"firstName\":\"Maya\",\"lastName\":\"Patil\",\"email\":\"maya.patil@example.com\",\"birthdate\":\"1990-12-05\"}},{\"id\":198,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":198000,\"active\":true,\"client\":{\"id\":\"95cb3369-cec2-4030-9ed9-1375d705b8d3\",\"firstName\":\"Hiroshi\",\"lastName\":\"Sato\",\"email\":\"hiroshi.sato@example.com\",\"birthdate\":\"1983-09-08\"}},{\"id\":199,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":199000,\"active\":true,\"client\":{\"id\":\"cd85883a-cbc7-4171-a1fa-f61464aa8563\",\"firstName\":\"Ana\",\"lastName\":\"Silva\",\"email\":\"ana.silva@example.com\",\"birthdate\":\"1987-01-22\"}},{\"id\":200,\"creationTime\":\"2025-07-25T09:55:57.062402\",\"balance\":200000,\"active\":true,\"client\":{\"id\":\"4ceee389-1103-418f-bb90-a3fc5c88b870\",\"firstName\":\"Maria\",\"lastName\":\"Garcia\",\"email\":\"maria.garcia@example.com\",\"birthdate\":\"1995-02-28\"}}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 589.957,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Test GET AllAccounts"
+			}
+		]
+	}
+}
