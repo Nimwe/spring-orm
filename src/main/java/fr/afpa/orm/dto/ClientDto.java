@@ -2,9 +2,6 @@ package fr.afpa.orm.dto;
 
 import java.time.LocalDate;
 import java.util.UUID;
-import java.util.List;
-
-
 
 /**
  * => implémenter un DTO (uniquement à partir de l'implémentation de la relation
@@ -22,7 +19,7 @@ public class ClientDto {
     private String last_name;
     private String email;
     private LocalDate birthdate;
-    private List<AccountDto> accounts;
+    private int accounstCount;
 
     // Constructeur vide obligatoire
     public ClientDto() {
@@ -69,11 +66,12 @@ public class ClientDto {
         this.birthdate = birthdate;
     }
 
-    public List<AccountDto> getAccounts() {
-        return accounts;
+    public int getAccounstCount() {
+        return accounstCount;
     }
 
-    public void setAccounts(List<AccountDto> accounts) {
-        this.accounts = accounts;
+    public void setAccounstCount(int accounstCount) {
+        this.accounstCount = accounstCount;
     }
+
 }

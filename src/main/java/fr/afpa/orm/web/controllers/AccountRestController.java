@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.*;
 
 import fr.afpa.orm.entities.Account;
 import fr.afpa.orm.repositories.AccountRepository;
-import jakarta.servlet.http.HttpServletResponse;
+import fr.afpa.orm.repositories.ClientRepository;
+
+import fr.afpa.orm.dto.AccountDto;
+import fr.afpa.orm.mappers.AccountMapper;
 
 /**
  * => ajouter la/les annotations nécessaires pour faire de
@@ -20,8 +23,6 @@ import jakarta.servlet.http.HttpServletResponse;
 @RestController
 @RequestMapping("/accounts") // Pour ne pas mettre le parametre Account sur tous les Get et Post
 public class AccountRestController {
-    private final AccountRepository accountRepository;
-
     /*
      * => implémenter un constructeur
      * => injecter {@link AccountRepository} en dépendance par injection via le
@@ -29,8 +30,12 @@ public class AccountRestController {
      * Plus d'informations ->
      * https://keyboardplaying.fr/blogue/2021/01/spring-injection-constructeur/
      */
-    public AccountRestController(AccountRepository accountRepository) {
+    private final AccountRepository accountRepository;
+    private final ClientRepository clientRepository;
+
+    public AccountRestController(AccountRepository accountRepository, ClientRepository clientRepository) {
         this.accountRepository = accountRepository;
+        this.clientRepository = clientRepository;
     }
 
     /**
@@ -47,10 +52,12 @@ public class AccountRestController {
      */
 
     @GetMapping
-    public List<Account> getAllAccounts() {
-        return StreamSupport
+    public List<AccountDto> getAllAccounts() {
+        List<Account> accounts = StreamSupport
                 .stream(accountRepository.findAll().spliterator(), false)
                 .collect(Collectors.toList());
+
+        return AccountMapper.toDtoList(accounts);
     }
 
     /**
@@ -59,16 +66,21 @@ public class AccountRestController {
      * Plus d'informations sur les variables de chemin ->
      * https://www.baeldung.com/spring-pathvariable
      * 
-     * TODO serait-il possible de renvoyer plutôt un "AccountDTO" dans la "ResponseEntity" ?
-     * la déclaration de la fonction deviendrait : public ResponseEntity<AccountDTO> getOne(@PathVariable long id)
+     * => serait-il possible de renvoyer plutôt un "AccountDTO" dans la
+     * "ResponseEntity" ?
+     * la déclaration de la fonction deviendrait : public ResponseEntity<AccountDTO>
+     * getOne(@PathVariable long id)
      * Pour se faire il faudra instancier un nouvel objet de DTO à partir de account
      * 
-     * Pour plus d'informations sur le concept de DTO : https://www.axopen.com/blog/2023/09/dto-definition-avantage/
+     * Pour plus d'informations sur le concept de DTO :
+     * https://www.axopen.com/blog/2023/09/dto-definition-avantage/
      */
     @GetMapping("/{id}")
-    public ResponseEntity<Account> getOne(@PathVariable long id) {
-        Optional<Account> account = accountRepository.findById(id);
-        return account.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+    public ResponseEntity<AccountDto> getOne(@PathVariable long id) {
+        Optional<Account> optionalAccount = accountRepository.findById(id);
+        return optionalAccount
+                .map(account -> ResponseEntity.ok(AccountMapper.toDto(account)))
+                .orElse(ResponseEntity.notFound().build());
     }
 
     /**
@@ -79,12 +91,19 @@ public class AccountRestController {
      * Tutoriel intéressant -> https://stackabuse.com/get-http-post-body-in-spring/
      * Le serveur devrai retourner un code http de succès (201 Created)
      * 
-    * TODO serait-il possible de renvoyer plutôt un "AccountDTO" dans la "ResponseEntity" ?
+     * => serait-il possible de renvoyer plutôt un "AccountDTO" dans la
+     * "ResponseEntity" ?
      **/
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public Account create(@RequestBody Account account) {
-        return accountRepository.save(account);
+    public ResponseEntity<AccountDto> create(@RequestBody AccountDto dto) {
+        Account account = AccountMapper.toEntity(dto);
+
+        if (dto.getClient() != null && dto.getClient().getId() != null) {
+            clientRepository.findById(dto.getClient().getId()).ifPresent(account::setClient);
+        }
+
+        Account saved = accountRepository.save(account);
+        return new ResponseEntity<>(AccountMapper.toDto(saved), HttpStatus.CREATED);
     }
 
     /**
@@ -92,24 +111,27 @@ public class AccountRestController {
      * 
      * Attention de bien ajouter les annotations qui conviennent
      * 
-     * TODO serait-il possible de renvoyer plutôt un "AccountDTO" dans la "ResponseEntity" ?
+     * => serait-il possible de renvoyer plutôt un "AccountDTO" dans la
+     * "ResponseEntity" ?
      */
     @PutMapping("/{id}")
-    public ResponseEntity<Account> update(@PathVariable long id, @RequestBody Account updateAccount) {
+    public ResponseEntity<AccountDto> update(@PathVariable long id, @RequestBody AccountDto dto) {
         Optional<Account> optionalAccount = accountRepository.findById(id);
-        if (optionalAccount.isPresent()) {
-            Account account = optionalAccount.get();
-
-            // Mise à jour des champs
-            account.setBalance(updateAccount.getBalance());
-            account.setActive(updateAccount.isActive());
-            account.setCreationTime(updateAccount.getCreationTime());
-            account.setClient(updateAccount.getClient());
-
-            return ResponseEntity.ok(accountRepository.save(account));
-        } else {
+        if (optionalAccount.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
+
+        Account account = optionalAccount.get();
+        account.setBalance(dto.getBalance());
+        account.setCreationTime(dto.getCreationTime());
+        account.setActive(dto.isActive());
+
+        if (dto.getClient() != null && dto.getClient().getId() != null) {
+            clientRepository.findById(dto.getClient().getId()).ifPresent(account::setClient);
+        }
+
+        Account updated = accountRepository.save(account);
+        return ResponseEntity.ok(AccountMapper.toDto(updated));
     }
 
     /**
@@ -124,13 +146,13 @@ public class AccountRestController {
      * réponse du serveur
      */
     @DeleteMapping("/{id}")
-    public void remove(@PathVariable long id, HttpServletResponse response) {
-        if (accountRepository.existsById(id)) {
-            accountRepository.deleteById(id);
-            response.setStatus(HttpServletResponse.SC_NO_CONTENT); // Erreur 204
-        } else {
-            response.setStatus(HttpServletResponse.SC_NOT_FOUND); // Erreur 404
+    public ResponseEntity<Void> remove(@PathVariable long id) {
+        if (!accountRepository.existsById(id)) {
+            return ResponseEntity.notFound().build();
         }
+
+        accountRepository.deleteById(id);
+        return ResponseEntity.noContent().build(); // HTTP 204
     }
 
 }

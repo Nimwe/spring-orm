@@ -17,6 +17,7 @@ public class AccountDto {
     private LocalDateTime creationTime;
     private Long balance;
     private boolean active;
+    private ClientDto client;
 
     // Constructeur vide obligatoire
     public AccountDto() {
@@ -53,6 +54,14 @@ public class AccountDto {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public ClientDto getClient() {
+        return client;
+    }
+
+    public void setClient(ClientDto client) {
+        this.client = client;
     }
 
 }
